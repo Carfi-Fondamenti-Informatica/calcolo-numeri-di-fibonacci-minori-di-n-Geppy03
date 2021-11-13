@@ -1,18 +1,20 @@
 #include <iostream>
 using namespace std;
-int main(){                                                     
-   int n=0, i=0, a=i, b=1, f=0;
-          cin>>n;
- if(n>=2) {
-     cout << "1" << endl;
-     for (int i = 0; i<=n; i++){
-         f = a + b;
-     a = b;
-     b = f;
-     cout << f << endl;
- }
- }else{
-     cout<<"errore"<<endl;
- }
- return 0;
+
+int fibonacci(int n) {
+    int i=0, p=i, s=1, f=1;
+    for(int i=0; i<n; i++) {
+        f=p+s, p=s, s=f;
+    }
+
+return f;
+
+}
+int main() {
+    int n=0;
+    cin>> n;
+    while(n>=0) {
+        cout<<fibonacci(n)<<endl;
+        n=n-1;
+    }
 }
