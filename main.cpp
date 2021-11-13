@@ -1,22 +1,17 @@
 #include <iostream>
 using namespace std;
 
-int fibonacci(int n) {
-    int i=0, p=i, s=1, f=1;
-    for(int i=0; i<n; i++) {
-        f=p+s; 
+
+int main() {
+    int  n=0, i=1, p=1, s=0, f=0;
+    cin>>n;
+    for(int i=1;i<n+2;i++){
+        f=p+s;
         p=s;
         s=f;
+        if(f<=n){
+            cout<<f<<endl;
+        }
     }
-
-return f;
-
-}
-int main() {
-    int n=0;
-    cin>> n;
-    while(n>=0) {
-        cout<<fibonacci(n)<<endl;
-        n=n-1;
-    }
+    return 0;
 }
